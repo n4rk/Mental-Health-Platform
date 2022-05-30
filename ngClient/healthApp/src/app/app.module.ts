@@ -20,6 +20,8 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { NeedhelpComponent } from './components/needhelp/needhelp.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutusComponent,
     NeedhelpComponent,
     ChatbotComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

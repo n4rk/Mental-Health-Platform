@@ -15,6 +15,8 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { NeedhelpComponent } from './components/needhelp/needhelp.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'notes/:id', component: NoteDetailsComponent },
   { path: 'needhelp', component: NeedhelpComponent },
   { path: 'aboutus', component: AboutusComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: '404', component: NotfoundComponent},
   { path: '**', redirectTo: '/404'},
