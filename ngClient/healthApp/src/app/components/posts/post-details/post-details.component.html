@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <div *ngIf="post" class="card">
+    <div class="card-header pt-3">
+      <h2>Post Details</h2>
+    </div>
+    <div class="card-body">
+      <div>
+        <p class="lh-lg">{{post.content}}</p>
+      </div>
+      <div>
+        <label>Date :</label><b> {{post.datePosted | date:"MMM d, y - h:mm a"}}</b>
+      </div>  
+    </div>
+
+    <div *ngIf="comments">
+      <div class="card-header d-flex mt-5 pt-3 pb-3">
+        <div class="col-6">
+          <h4>Comments Details</h4>
+        </div>
+        <div class="col-6 text-end">
+          <a (click)="createComment()" class="btn btn-warning">Add comment</a>
+        </div>
+        
+      </div>
+      <div class="card-body" *ngFor="let c of comments">
+        <div class="row">
+          <div class="col-1">
+            <label>ID : </label>
+            <span class="ms-2 fw-bold">{{c.id}}</span>
+          </div>
+          <div class="col-7">
+            <p class="lh-lg ms-2">{{c.content}}</p>
+          </div>
+          <div class="col-2">
+            <span class="ms-2">{{c.date_posted | date:"MMM d, y - h:mm a"}} </span>
+          </div>
+          <div class="col-2 text-end">
+            <a class="btn btn-outline-danger mx-1" (click)="deleteComment(c.id)"><i class="bi bi-trash"></i></a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <button (click)="gotoList()" class="btn btn-primary mt-5 px-5"><i class="bi bi-arrow-left-circle"></i> Back</button>
+</div>

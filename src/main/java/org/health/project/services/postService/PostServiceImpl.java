@@ -9,6 +9,7 @@ import org.health.project.repositories.PostRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -24,6 +25,7 @@ public class PostServiceImpl implements PostService{
     @Override
     public PostDto savePost(PostDto postDto) {
         postDto.setId(UUID.randomUUID().toString());
+        postDto.setDatePosted(new Date());
         Post post = postMapper.fromPostDtoToPost(postDto);
         Post savedPost =postRepository.save(post);
         return postMapper.fromPostToPostDto(savedPost);
