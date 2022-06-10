@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Chatbot } from 'src/app/model/chatbot.model';
+import { ChatbotService } from 'src/app/services/chatbot.service';
 
 @Component({
   selector: 'app-chatbot',
@@ -6,35 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chatbot.component.css']
 })
 export class ChatbotComponent implements OnInit {
+  chat : Chatbot = new Chatbot();
+  messageDate !: any;
+  messages = Array();
+  responses = Array();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  /* 
-  newCustomerFormGroup! : FormGroup;
-  constructor(private fb : FormBuilder, private customerService:CustomerService, private router:Router) { }
+  constructor(private chatbotService: ChatbotService, private router: Router) { }
 
   ngOnInit(): void {
-    this.newCustomerFormGroup=this.fb.group({
-      name : this.fb.control(null, [Validators.required, Validators.minLength(4)]),
-      email : this.fb.control(null,[Validators.required, Validators.email])
-    });
+    
+  }
+  
+  save() {
+    this.chatbotService.getResponse(this.chat.message).subscribe(
+      data => {
+        this.responses.push(data);
+        console.log(this.responses);
+      }, 
+      err => console.log(err)
+    );
   }
 
-  handleSaveCustomer() {
-    let customer:Customer=this.newCustomerFormGroup.value;
-    this.customerService.saveCustomer(customer).subscribe({
-      next : data=>{
-        alert("Customer has been successfully saved!");
-        //this.newCustomerFormGroup.reset();
-        this.router.navigateByUrl("/customers");
-      },
-      error : err => {
-        console.log(err);
-      }
-    });
-  */
+  onSubmit() {
+    this.messageDate = new Date();
+    this.messages.push(this.chat.message);
+    console.log(this.messages);
+    this.save();
+    this.chat.message = '';
+  }
 
 }

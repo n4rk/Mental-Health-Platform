@@ -17,21 +17,22 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AdminGuardGuard } from './components/guards/admin-guard.guard';
 
 const routes: Routes = [
   
   { path: 'home', component: HomeComponent },
   { path: 'chatbot', component: ChatbotComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'posts', component: PostsComponent },
+  { path: 'posts', component: PostsComponent, canActivate:[AdminGuardGuard]  },
   { path: 'posts/add', component: CreatePostComponent },
   { path: 'posts/update/:id', component: UpdatePostComponent },
   { path: 'posts/:id', component: PostDetailsComponent },
   { path: 'posts/:id/add', component: CreateCommentComponent },
-  { path: 'notes', component: NotesComponent },
-  { path: 'notes/add', component: CreateNoteComponent },
-  { path: 'notes/update/:id', component: UpdateNoteComponent },
-  { path: 'notes/:id', component: NoteDetailsComponent },
+  { path: 'notes', component: NotesComponent, canActivate:[AdminGuardGuard] },
+  { path: 'notes/add', component: CreateNoteComponent, canActivate:[AdminGuardGuard]  },
+  { path: 'notes/update/:id', component: UpdateNoteComponent, canActivate:[AdminGuardGuard]  },
+  { path: 'notes/:id', component: NoteDetailsComponent, canActivate:[AdminGuardGuard]  },
   { path: 'needhelp', component: NeedhelpComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'login', component: LoginComponent },

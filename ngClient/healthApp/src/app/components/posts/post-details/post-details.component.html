@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container my-5">
   <div *ngIf="post" class="card">
     <div class="card-header pt-3">
       <h2>Post Details</h2>
@@ -24,11 +24,7 @@
       </div>
       <div class="card-body" *ngFor="let c of comments">
         <div class="row">
-          <div class="col-1">
-            <label>ID : </label>
-            <span class="ms-2 fw-bold">{{c.id}}</span>
-          </div>
-          <div class="col-7">
+          <div class="col-8">
             <p class="lh-lg ms-2">{{c.content}}</p>
           </div>
           <div class="col-2">

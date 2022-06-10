@@ -21,24 +21,20 @@
                         <div class="col-2 text-center"><small>Or</small></div>
                         <div class="col-5" style="height:2px;background-color: #f1f1f1;"></div>
                     </div>
-                    <div class="row px-3 mb-4">
-                        <label class="mb-1"><h6 class="mb-0 text-sm">Email Address</h6></label>
-                        <input class="form-control" type="text" name="email" placeholder="Enter a valid email address">
-                    </div>
-                    <div class="row px-3 mb-4">
-                        <label class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
-                        <input type="password" name="password" placeholder="Enter password" class="form-control">
-                    </div>
-                    <div class="row px-3 mb-4">
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input id="chk1" type="checkbox" name="chk" class="form-check-input"> 
-                            <label for="chk1" class="form-check-label ms-2">Remember me</label>
+                    <form method="post" [formGroup]="loginForm" (ngSubmit)="handleLoginSubmit()">
+                        <div class="row px-3 mb-4">
+                            <label class="mb-1"><h6 class="mb-0 text-sm">Username</h6></label>
+                            <input class="form-control" type="text" formControlName="username" placeholder="Enter a valid username">
                         </div>
-                        <a href="#" class="text-info mt-4 text-decoration-none">Forgot Password?</a>
-                    </div>
-                    <div class="row mb-3 px-3">
-                        <button type="submit" class="btn" style="background-color: #41DCBD;">Login</button>
-                    </div>
+                        <div class="row px-3 mb-4">
+                            <label class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
+                            <input type="password" formControlName="password" placeholder="Enter password" class="form-control">
+                        </div>
+
+                        <div class="row mb-3 px-3">
+                            <button type="submit" class="btn" style="background-color: #41DCBD;">Login</button>
+                        </div>
+                    </form>
                     <div class="row mb-4 px-3">
                         <small class="font-weight-bold">Don't have an account? <a class="text-success mt-4 text-decoration-none" routerLink="/register">Register</a></small>
                     </div>

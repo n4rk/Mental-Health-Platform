@@ -23,132 +23,48 @@
                         <!-- Chat Box-->
                         <div class="col-12 px-0">
                             <div class="px-4 py-5 chat-box bg-white">
-                                <!-- Sender Message-->
-                                <div class="row media w-50 mb-3">
-                                    <div class="col-1">
-                                        <i class="bi bi-person-circle fs-2"></i>
-                                    </div>
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #22BBFF !important">
-                                                <p class="text-small mb-0 text-white">Hi</p>
+                                <div *ngFor="let m of messages; let i = index; let r of responses;">
+                                    <!-- TESTING-->
+                                    <div class="row media w-50 mb-3">
+                                        <div class="col-1">
+                                            <i class="bi bi-person-circle fs-2"></i>
+                                        </div>
+                                        <div class="col-11">
+                                            <div class="media-body ms-3">
+                                                <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #22BBFF !important">
+                                                    <p class="text-small mb-0 text-white">{{messages[i]}}</p>
+                                                </div>
+                                                <p class="small text-muted"> {{ this.messageDate | date:'d MMM y | h:mm a'}} </p>
                                             </div>
-                                            <p class="small text-muted">12:00 PM | May 28</p>
                                         </div>
                                     </div>
-                                </div>
+                                    <!-- TESTING-->
 
-                                <!-- Bot Message-->
-                                <div class="row media w-50 ms-auto mb-3">
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #41DCBD !important">
-                                                <p class="text-small mb-0 text-white">Hey ! how was your day ?</p>
+                                    <!-- TESTING-->
+                                    
+                                    <div class="row media w-50 ms-auto mb-3">
+                                        <div class="col-11">
+                                            <div class="media-body ms-3">
+                                                <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #41DCBD !important">
+                                                    <p class="text-small mb-0 text-white">{{r['response']}}</p>
+                                                </div>
+                                                <p class="small text-muted"> {{ this.messageDate | date:'d MMM y | h:mm a'}} </p>
                                             </div>
-                                            <p class="small text-muted">12:00 PM | May 28</p>
+                                        </div>
+                                        <div class="col-1">
+                                            <i class="bi bi-robot fs-2"></i>
                                         </div>
                                     </div>
-                                    <div class="col-1">
-                                        <i class="bi bi-robot fs-2"></i>
-                                    </div>
+                                    
                                 </div>
-
-                                <!-- Sender Message-->
-                                <div class="row media w-50 mb-3">
-                                    <div class="col-1">
-                                        <i class="bi bi-person-circle fs-2"></i>
-                                    </div>
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #22BBFF !important">
-                                                <p class="text-small mb-0 text-white">I feel anxious</p>
-                                            </div>
-                                            <p class="small text-muted">12:01 PM | May 28</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Bot Message-->
-                                <div class="row media w-50 ms-auto mb-3">
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #41DCBD !important">
-                                                <p class="text-small mb-0 text-white">Use stress management and relaxation techniques. Visualization techniques, meditation and yoga are examples of relaxation techniques that can ease anxiety.</p>
-                                            </div>
-                                            <p class="small text-muted">12:01 PM | May 28</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <i class="bi bi-robot fs-2"></i>
-                                    </div>
-                                </div>
-
-                                <!-- Sender Message-->
-                                <div class="row media w-50 mb-3">
-                                    <div class="col-1">
-                                        <i class="bi bi-person-circle fs-2"></i>
-                                    </div>
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #22BBFF !important">
-                                                <p class="text-small mb-0 text-white">That's helpful</p>
-                                            </div>
-                                            <p class="small text-muted">12:01 PM | May 28</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Bot Message-->
-                                <div class="row media w-50 ms-auto mb-3">
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #41DCBD !important">
-                                                <p class="text-small mb-0 text-white">Any time!</p>
-                                            </div>
-                                            <p class="small text-muted">12:02 PM | May 28</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <i class="bi bi-robot fs-2"></i>
-                                    </div>
-                                </div>
-
-                                <!-- Sender Message-->
-                                <div class="row media w-50 mb-3">
-                                    <div class="col-1">
-                                        <i class="bi bi-person-circle fs-2"></i>
-                                    </div>
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #22BBFF !important">
-                                                <p class="text-small mb-0 text-white">Bye</p>
-                                            </div>
-                                            <p class="small text-muted">12:01 PM | May 28</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Bot Message-->
-                                <div class="row media w-50 ms-auto mb-3">
-                                    <div class="col-11">
-                                        <div class="media-body ms-3">
-                                            <div class="bg-light rounded-3 py-2 px-3 mb-2" style="background-color: #41DCBD !important">
-                                                <p class="text-small mb-0 text-white">Have a nice day</p>
-                                            </div>
-                                            <p class="small text-muted">12:02 PM | May 28</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-1">
-                                        <i class="bi bi-robot fs-2"></i>
-                                    </div>
-                                </div>
+                                
 
                             </div>
 
                             <!-- Typing area -->
-                            <form action="#" class="mt-5">
+                            <form (ngSubmit)="onSubmit()" class="mt-5" name="chatbotForm">
                                 <div class="input-group">
-                                    <input type="text" placeholder="Type a message..." class="form-control border-0 rounded-md py-4 bg-light"/>
+                                    <input type="text" placeholder="Type a message..." [(ngModel)]="chat.message" name="message" autocomplete="off" class="form-control border-0 rounded-md py-4 bg-light"/>
                                     <button type="submit" class="btn btn-info">
                                         <i class="bi bi-send-fill fs-4 px-3 text-white"></i>
                                     </button>

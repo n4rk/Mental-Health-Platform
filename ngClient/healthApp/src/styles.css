@@ -127,7 +127,6 @@ body {
 }
 .bootstrap_chat {
     background-color: white;
-    min-height: 75vh;
     border-radius: 20px;
     box-shadow: 0 0 30px #eeeeee;
 }
@@ -137,7 +136,8 @@ body {
 }
 
 .messages-box, .chat-box {
-    height: 75vh;
+    min-height: 25vh;
+    max-height: 75vh;
     overflow-y: scroll;
 }
 

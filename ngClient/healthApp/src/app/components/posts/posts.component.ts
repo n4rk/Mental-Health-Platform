@@ -3,6 +3,9 @@ import { PostService } from "../../services/post.service";
 import { Router } from '@angular/router';
 import { Post } from "../../model/posts.model";
 import { Comment } from "../../model/comments.model";
+import { User } from 'src/app/model/user.model';
+import { Subscription } from 'rxjs';
+import { SecurityService } from 'src/app/services/security.service';
 
 @Component({
   selector: 'app-posts',
@@ -12,10 +15,26 @@ import { Comment } from "../../model/comments.model";
 export class PostsComponent implements OnInit {
   posts! : Post[];
   comments!: Comment[];
+  user ?: User;
+  userRole ="";
+  userSub$ ?:Subscription;
 
-  constructor(private postService:PostService, private router: Router) {};
+  constructor(private securityService:SecurityService, private postService:PostService, private router: Router) {
+    this.userSub$ = this.securityService.userSubject.subscribe({
+      next: user=>{
+        this.user = user;
+        this.userRole = user?.roles.find(e=>e.roleName=="ADMIN")!=undefined?"ADMIN":"USER";
+      },
+      error: (err)=>{
+        console.error(err)
+      }
+    })
+  };
 
   ngOnInit(): void {
+    this.securityService.getUser()
+    this.user = this.securityService.user;
+    this.userRole = this.securityService.user?.roles.find(e=>e.roleName=="ADMIN")!=undefined?"ADMIN":"USER";
     this.getPosts();
   }
 

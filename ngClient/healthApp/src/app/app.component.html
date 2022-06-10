@@ -16,10 +16,17 @@
               <a routerLink="/needhelp" routerLinkActive="active" class="nav-item mx-2 nav-link">Need Help ?</a>
               <a routerLink="/aboutus" routerLinkActive="active" class="nav-item mx-2 nav-link">About us</a>
           </div>
-          <div class="navbar-nav ms-auto">
-              <a href="/login" class="nav-item btn me-3 px-4 fw-bold login"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
-              <a routerLink="/register" class="nav-item btn px-4 fw-bold register"><i class="bi bi-person-plus-fill me-2"></i>Register</a>
-          </div>
+          <ng-container *ngIf="!user; else authenticated">
+            <div class="navbar-nav ms-auto">
+                <a href="/login" class="nav-item btn me-3 px-4 fw-bold login"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
+                <a routerLink="/register" class="nav-item btn px-4 fw-bold register"><i class="bi bi-person-plus-fill me-2"></i>Register</a>
+            </div>
+          </ng-container>
+          <ng-template #authenticated>
+            <div class="navbar-nav ms-auto">
+                <button (click)="logout()" class="btn btn-outline-danger rounded-pill me-3 px-4 fw-bold"><i class="bi bi-box-arrow-right mr-2"></i> Logout</button>
+            </div>
+          </ng-template>
       </div>
   </div>
 </nav>
