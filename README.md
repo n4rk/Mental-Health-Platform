@@ -22,7 +22,7 @@ This project was divided into 3 parts :
             <sub><b>HACHMI Mohamed Amine</b></sub></a>
     </td>
     <td align="center"><a href="https://github.com/Anass-Bricha">
-    <img src="https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black.png" width="100px;" alt="Image"/><br/>
+    <img src="[https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black.png](https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg)" width="100px;" alt="Image"/><br/>
       <sub><b>BRICHA Anass</b></sub></a>
     </td>
     <td align="center"><a href="https://github.com/soufiyanelhabbazi">
@@ -30,7 +30,7 @@ This project was divided into 3 parts :
           <sub><b>EL HABBAZI Soufiyan</b></sub></a>
     </td>
     <td align="center"><a href="https://github.com/bader-barazzouk">
-          <img src="https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black.png" width="100px;" alt="Image"/><br/>
+          <img src="[https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black.png](https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg)" width="100px;" alt="Image"/><br/>
       <sub><b>BARAZZOUK Bader</b></sub></a>
     </td>
     <td align="center"><a href="https://github.com/issam-killua">
