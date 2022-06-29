@@ -13,7 +13,7 @@ This project was divided into 3 parts :
 
 # Contributors
 
- >  Special Thanks to this team of contributors who have did their best to craft this solution :
+ >  Special Thanks to this team of contributors who have done their best to craft this solution :
 
 <table>
   <tr>
