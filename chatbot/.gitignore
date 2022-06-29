@@ -1,0 +1,7 @@
+### PyCharm ###
+.idea
+__pycache__
+standalone-frontend
+static
+templates
+venv

@@ -2,7 +2,7 @@ package org.health.project.services.NotePadService;
 
 import lombok.AllArgsConstructor;
 import org.health.project.dtos.NotePadDto;
-import org.health.project.entites.NotePad;
+import org.health.project.entities.NotePad;
 import org.health.project.mappers.NotePadMapper.NotePadMapper;
 import org.health.project.repositories.NotePadRespository;
 import org.springframework.stereotype.Service;
@@ -40,7 +40,8 @@ public class NotePadServiceImpl implements NotePadService {
 
     @Override
     public List<NotePadDto> getAllNotes() {
-        List<NotePad> notePadList = notePadRespository.findAll();
+       // List<NotePad> notePadList = notePadRespository.findAll();
+        List<NotePad> notePadList = notePadRespository.getAllNotes();
         List<NotePadDto> notePadDtos = notePadList.stream().map(note -> notePadMapper.from_NotePad_to_NotePadDto(note)).collect(Collectors.toList());
         return notePadDtos;
     }

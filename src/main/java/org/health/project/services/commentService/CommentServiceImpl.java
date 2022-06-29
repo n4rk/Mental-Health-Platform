@@ -3,16 +3,16 @@ package org.health.project.services.commentService;
 import lombok.AllArgsConstructor;
 import org.health.project.dtos.CommentDto;
 import org.health.project.dtos.PostDto;
-import org.health.project.entites.Comment;
-import org.health.project.entites.Post;
+import org.health.project.entities.Comment;
+import org.health.project.entities.Post;
 import org.health.project.mappers.commentMapper.CommentMapper;
-import org.health.project.mappers.commentMapper.CommentMapperImpl;
 import org.health.project.repositories.CommentRepository;
 import org.health.project.repositories.PostRepository;
 import org.health.project.services.postService.PostService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,6 +27,7 @@ public class CommentServiceImpl implements CommentService{
 
     @Override
     public CommentDto saveComment(CommentDto commentDto) {
+        commentDto.setDate_posted(new Date());
         Comment comment = commentMapper.from_CommentDto_To_Comment(commentDto);
         Comment savedComment = commentRepository.save(comment);
         return commentMapper.from_Comment_To_CommentDto(savedComment);

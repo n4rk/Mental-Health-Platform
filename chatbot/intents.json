@@ -1,0 +1,110 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "good morning"
+      ],
+      "responses": [
+        "Hey :-)",
+        "what's up",
+        "Hello, how are you? ",
+        "Hi there, it's been a while",
+        "Hey man, how was your day"
+      ]
+    },
+    {
+      "tag": "Expressing feelings",
+      "patterns": [
+        "i'm a little sad ?",
+        "i'm not good",
+        "i'm not feeling ok",
+        "i feel nervous and restless",
+        "i feel like a failure",
+        "I worry too much over something that really doesnt matter",
+        "I feel inadequate",
+        "Some unimportant thought runs through my mind and bothers me",
+        "i overthink a lot"
+      ],
+      "responses": [
+        "What is the problem from your point of view ?",
+        "How does this problem typically make you feel ?",
+        "How often do you experience the problem ?",
+        "How connected do you feel to the people around you ?",
+        "Can you please tell me more about your feelings ?",
+        "Who is your inspiration in life ?"
+      ]
+    },
+    {
+      "tag": "Depression",
+      "patterns": [
+        "I feel helpless",
+        "I cant figure it out, im lost ",
+        "I cant stand my life anymore",
+        "I cant help but feel sorry for myself"
+      ],
+      "responses": [
+        " When you’re depressed your days become similar in their lack of enjoyment and hard to distinguish from one another. Setting a daily schedule can help you get active and become involved with your life. Your routine could include: getting up at the same time every day, scheduling an activity for each night of the week, and making one phone call a day to a supportive friend or relative.",
+        "A major symptom of depression is the sense you can't accomplish anything and because of that you feel bad about yourself. Setting small daily goals such as making the bed, taking a shower, or going for a walk can help. By completing small contrary acts you’ll feel better about your abilities and in turn feel better about yourself.",
+        "When you’re depressed the last thing you probably want to do is eat healthy. Regrettably eating overly processed foods like fast foods and sugary sweets may be adding to your depression. Processed foods contain refined carbohydrates that have no nutritional value, and unhealthy levels of sugar and salt. Clinical studies have found that a diet high in refined foods impairs brain function and encourages depression. Eating healthy foods has been shown to reverse these issues. What you eat directly affects your brain and your mood.",
+        "People who suffer from depression desperately want to alter the way they feel. Many turn to drugs and alcohol as a solution. Unfortunately alcohol, tranquilizers, and opiates act as depressant to your nervous system and make your symptoms worse. Amphetamines can give the illusion they reduce depression, however the come down, the physical toll on your body, and the withdrawal, result in an even worse depression. Adding drugs to your already depressed system never helps.",
+        "Regular exercise boosts the naturally produced endorphins that your body uses to help you feel better and less depressed. Endorphins interact with your brain’s receptors and trigger positive feelings. Exercising, especially outdoors and in sunlight, invigorates your body. You don’t need to compete in a triathlon; something as simple as walking for an hour every other day can help get your endorphins flowing.",
+        "Sleep: It’s recommended you get 6 to 8 hours of sleep a night. But depression can make it hard to sleep, and with too little sleep your depression can get worse. This is where setting a routine can help. Try going to bed and getting up at the same time every day. Do not take naps as they can alter your sleep schedule. Sometimes, getting rid of the distractions you engage in at night before sleep—watching TV, looking at your cell phone, or shopping on your computer—helps to calm your mind and it’s easier to get a good night’s sleep.",
+        "Stress and anxiety are major triggers for depression, and meditation has been proven to alter your reaction to those feelings. When you’re stressed the body produces a hormone called cortisol, and meditation lowers cortisol. During meditation your brain is also producing theta waves that usually only occur when you’re asleep, and alpha waves like when you’re daydreaming. When your body gets as relaxed as when it’s sleeping or daydreaming it starts producing dopamine; a neurotransmitter that’s released into your body during pleasurable situations. If you add all those together meditation is probably the best natural treatment for reducing depression.",
+        "A lot of the work in treating depression is changing how you think. When you're depressed, you embrace worst-case scenarios and obsessively dwell on the negative. Challenging these negative thoughts is a common treatment for depression. You feel no one loves you, but what real evidence do you have? You think you’re a worthless horrible person, but is that really the truth? Try challenging these beliefs and ideas. When the thoughts come say, “no, we’re not doing this today.” When you’re telling yourself what a terrible person you are, think about how you would respond if a friend talked about themselves that way. You would probably tell them to stop being so negative. Apply the same logic to your own thoughts. It takes practice, but if you address the negative thoughts head on, don’t embrace them, or indulge, they’ll eventually become less persuasive."
+        
+  ]},
+  {
+    "tag": "Anxiety",
+    "patterns": [
+      "I have uncontrolled feelings",
+      "i find it very hard to concentrate",
+      "I have sleeping difficulties",
+      "I have irrational fear",
+      "i feel anxious"
+    ],
+    "responses": [
+      "Develop a routine so that you're physically active most days of the week. Exercise is a powerful stress reducer. It may improve your mood and help you stay healthy. Start out slowly and gradually increase the amount and intensity of your activities",
+      "Avoid alcohol and recreational drugs. These substances can cause or worsen anxiety. If you can't quit on your own, see your doctor or find a support group to help you.",
+      "Use stress management and relaxation techniques. Visualization techniques, meditation and yoga are examples of relaxation techniques that can ease anxiety.",
+      "Make sleep a priority. Do what you can to make sure you're getting enough sleep to feel rested. If you aren't sleeping well, see your doctor.",
+      "Remember that you aren't alone. Support groups offer compassion, understanding and shared experiences. The National Alliance on Mental Illness and the Anxiety and Depression Association of America provide information on finding support."
+    ]
+  },
+   
+    {
+      "tag": "Eating Disorder disorder",
+      "patterns": [
+        "I haven’t eaten all day.",
+        "I’m starving.",
+         "I’m going to eat better."
+      ],
+      "responses": [
+        "Work toward a healthy weight",
+        "Understand how nutrition affects your body, including recognizing how your eating disorder causes nutrition issues and physical problems",
+        "Establish regular eating patterns, generally, three meals a day with regular snacks",
+        "Take steps to avoid dieting or binging"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, you are more than welcome",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    }
+   
+  ]
+}

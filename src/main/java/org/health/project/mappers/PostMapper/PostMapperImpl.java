@@ -1,7 +1,7 @@
 package org.health.project.mappers.PostMapper;
 
 import org.health.project.dtos.PostDto;
-import org.health.project.entites.Post;
+import org.health.project.entities.Post;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

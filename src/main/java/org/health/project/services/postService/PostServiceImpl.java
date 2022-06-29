@@ -2,9 +2,8 @@ package org.health.project.services.postService;
 
 import lombok.AllArgsConstructor;
 import org.health.project.dtos.PostDto;
-import org.health.project.entites.Post;
+import org.health.project.entities.Post;
 import org.health.project.mappers.PostMapper.PostMapper;
-import org.health.project.repositories.CommentRepository;
 import org.health.project.repositories.PostRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,7 +44,8 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public List<PostDto> getPosts() {
-        List<Post> postList = postRepository.findAll();
+        //List<Post> postList = postRepository.findAll();
+        List<Post> postList = postRepository.getAllPosts();
         List<PostDto> postDtoList = postList.stream().map(post -> postMapper.fromPostToPostDto(post)).collect(Collectors.toList());
         return postDtoList;
     }

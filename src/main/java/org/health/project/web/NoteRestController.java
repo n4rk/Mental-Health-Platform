@@ -9,10 +9,10 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @AllArgsConstructor
 public class NoteRestController {
     private NotePadService notePadService;
-
 
     @GetMapping(path = "/notes")
     public List<NotePadDto> getAllNotes(){
@@ -21,7 +21,7 @@ public class NoteRestController {
 
 
     @GetMapping(path = "/notes/{id}")
-    public NotePadDto getNote(Long id){
+    public NotePadDto getNote(@PathVariable Long id){
         return notePadService.getNote(id);
     }
 
@@ -33,15 +33,14 @@ public class NoteRestController {
     }
 
     @PutMapping(path = "/notes/{id}")
-    public NotePadDto modifyNote(@RequestBody NotePadDto notePadDto,
-                                 @PathVariable Long id){
+    public NotePadDto modifyNote(@RequestBody NotePadDto notePadDto, @PathVariable Long id) {
         notePadDto.setId(id);
         return notePadService.updateNote(notePadDto);
     }
 
 
     @DeleteMapping(path = "/notes/{id}")
-    public void deleteNote(Long id){
+    public void deleteNote(@PathVariable Long id){
         notePadService.deleteNote(id);
     }
 

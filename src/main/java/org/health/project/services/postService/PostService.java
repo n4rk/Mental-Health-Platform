@@ -1,8 +1,6 @@
 package org.health.project.services.postService;
 
-import org.health.project.dtos.CommentDto;
 import org.health.project.dtos.PostDto;
-import org.health.project.entites.Post;
 
 import java.util.List;
 

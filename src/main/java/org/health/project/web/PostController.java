@@ -3,7 +3,7 @@ package org.health.project.web;
 import lombok.AllArgsConstructor;
 import org.health.project.dtos.CommentDto;
 import org.health.project.dtos.PostDto;
-import org.health.project.entites.Post;
+import org.health.project.repositories.PostRepository;
 import org.health.project.services.commentService.CommentService;
 import org.health.project.services.postService.PostService;
 import org.springframework.web.bind.annotation.*;
@@ -12,17 +12,16 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @AllArgsConstructor
 public class PostController {
-    private PostService postService;
     private CommentService commentService;
-
+    private PostService postService;
 
     //this request to display the posts without the comments
-    @GetMapping(path = "/posts")
-    public List<PostDto> getAllPosts(){
-        return postService.getPosts();
-    }
+   @GetMapping(path = "/posts")
+   public List<PostDto> getAllPosts(){ return postService.getPosts(); }
+
 
     @GetMapping(path = "/posts/{id}")
     public PostDto getPost(@PathVariable String id){

@@ -1,7 +1,7 @@
 package org.health.project.mappers.NotePadMapper;
 
 import org.health.project.dtos.NotePadDto;
-import org.health.project.entites.NotePad;
+import org.health.project.entities.NotePad;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

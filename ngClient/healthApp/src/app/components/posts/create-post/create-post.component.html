@@ -1,19 +1,24 @@
-<div class="container mt-5">
-  <div class="justify-content-center">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="text-center"> Create Post : </h3>
-      </div>
-      <div class="card-body">
-        <form (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="content"> Post content : </label>
-            <input type="text" class="form-control" id="content" [(ngModel)]="post.content" name="content" minlength="3" maxlength="1000" required>
-          </div>
-          <button class="btn btn-success mt-4 px-4" type="submit">Submit</button>
-        </form>
+<ng-container  *ngIf="!user;else authenticated">
+        
+</ng-container>
+<ng-template #authenticated>
+  <div class="container mt-5">
+    <div class="justify-content-center">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center"> Create Post : </h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="content"> Post content : </label>
+              <input type="text" class="form-control" id="content" [(ngModel)]="post.content" name="content" minlength="3" maxlength="1000" required>
+            </div>
+            <button class="btn btn-success mt-4 px-4" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
+    <button (click)="gotoList()" class="col-12 btn btn-primary mt-5 px-5"><i class="bi bi-arrow-left-circle"></i> Back</button>
   </div>
-  <button (click)="gotoList()" class="col-12 btn btn-primary mt-5 px-5"><i class="bi bi-arrow-left-circle"></i> Back</button>
-</div>
+</ng-template>

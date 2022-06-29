@@ -1,52 +1,47 @@
-<ng-container  *ngIf="!user;else authenticated">
-        
-</ng-container>
-<ng-template #authenticated>
-    <section id="posts" class="posts">
-        <div class="container">
-            <div class="text-center">
-                <h5 class="d-inline-block justify-content-lg-center section-title">Posts</h5>
-                <h2 style="color: #22BBFF;margin:20px auto;">
-                    Read what people had <span style="color: #41DCBD;">Experienced.</span>
-                </h2>
-                <p>You can also share your own feelings and experiences Anonymously!</p>
-                <a (click)="createPost()" class="btn btn-info px-5 rounded-pill text-white">Create your own Post</a>
-            </div>
+<section id="posts" class="posts">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="d-inline-block justify-content-lg-center section-title">Posts</h5>
+            <h2 style="color: #22BBFF;margin:20px auto;">
+                Read what people had <span style="color: #41DCBD;">Experienced.</span>
+            </h2>
+            <p>You can also share your own feelings and experiences Anonymously!</p>
+            <a (click)="createPost()" class="btn btn-info px-5 rounded-pill text-white">Create your own Post</a>
+        </div>
 
-            <div class="post-examples mt-5">
-                <div class="row justify-content-between">
-                    <div class="post-item col-12 m-4 py-5 px-5" *ngFor = "let p of posts">
-                        <div class="cell-right mb-3">
-                            <img src="../assets/img/user-secret-5.svg" alt="Anonymous user" width="50">
+        <div class="post-examples mt-5">
+            <div class="row justify-content-between">
+                <div class="post-item col-12 m-4 py-5 px-5" *ngFor = "let p of posts">
+                    <div class="cell-right mb-3">
+                        <img src="assets/img/user-secret-5.svg" alt="Anonymous user" width="50">
+                    </div>
+                    <div class="post-content">
+                        <i class="bi bi-chat-left-quote-fill quotes me-2"></i>
+                        {{p.content}}
+                    </div>
+                    <div class="post-date mt-3">
+                        {{p.datePosted | date}}
+                    </div>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-2">
+                            <button (click) = "getPost(p.id)" class="btn btn-outline-info px-2 py-1"><i class="bi bi-eye pe-2"></i> View Comments</button>
                         </div>
-                        <div class="post-content">
-                            <i class="bi bi-chat-left-quote-fill quotes me-2"></i>
-                            {{p.content}}
-                        </div>
-                        <div class="post-date mt-3">
-                            {{p.datePosted | date}}
-                        </div>
-                        <div class="row justify-content-center mt-4">
+                        <!-- UPDATE AND DELETE POST
                             <div class="col-2">
-                                <button (click) = "getPost(p.id)" class="btn btn-outline-info px-2 py-1"><i class="bi bi-eye pe-2"></i> View Comments</button>
+                                <button (click) = "updatePost(p.id)" class="btn btn-outline-secondary mx-2 px-2 py-1"><i class="bi bi-pen pe-2"></i> Update Post</button>
                             </div>
-                            <!-- UPDATE AND DELETE POST
-                                <div class="col-2">
-                                    <button (click) = "updatePost(p.id)" class="btn btn-outline-secondary mx-2 px-2 py-1"><i class="bi bi-pen pe-2"></i> Update Post</button>
-                                </div>
-                                <div class="col-2">
-                                    <button (click) = "deletePost(p.id)" class="btn btn-outline-danger mx-2 px-2 py-1"><i class="bi bi-trash pe-2"></i> Delete Post</button>
-                                </div>
-                                
-                            -->
-                        </div>
+                            <div class="col-2">
+                                <button (click) = "deletePost(p.id)" class="btn btn-outline-danger mx-2 px-2 py-1"><i class="bi bi-trash pe-2"></i> Delete Post</button>
+                            </div>
+
+                        -->
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</ng-template>
+    </div>
+</section>
 <!-- FOOTER -->
 <app-footer>
-    
+
 </app-footer>

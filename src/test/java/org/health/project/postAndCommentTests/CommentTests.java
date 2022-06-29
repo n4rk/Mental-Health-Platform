@@ -1,10 +1,8 @@
 package org.health.project.postAndCommentTests;
 
 import org.health.project.dtos.CommentDto;
-import org.health.project.dtos.PostDto;
-import org.health.project.entites.Comment;
-import org.health.project.entites.Post;
-import org.health.project.mappers.PostMapper.PostMapperImpl;
+import org.health.project.entities.Comment;
+import org.health.project.entities.Post;
 import org.health.project.mappers.commentMapper.CommentMapperImpl;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

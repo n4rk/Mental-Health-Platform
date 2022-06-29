@@ -10,6 +10,7 @@ import java.util.Date;
 @AllArgsConstructor @NoArgsConstructor
 public class PostDto {
     private String id;
+    private String username;    //this is the anonymous username for the posts
     private Date datePosted;
     private String content;
 }

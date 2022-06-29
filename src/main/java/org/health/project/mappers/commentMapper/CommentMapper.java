@@ -1,7 +1,7 @@
 package org.health.project.mappers.commentMapper;
 
 import org.health.project.dtos.CommentDto;
-import org.health.project.entites.Comment;
+import org.health.project.entities.Comment;
 
 public interface CommentMapper {
     CommentDto from_Comment_To_CommentDto(Comment comment);
