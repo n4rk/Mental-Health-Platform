@@ -31,3 +31,53 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Chatbot ###
+chatbot/.idea
+chatbot/__pycache__
+chatbot/standalone-frontend
+chatbot/static
+chatbot/templates
+chatbot/venv
+
+### Angular Frontend ###
+# Compiled output
+ngClient/dist
+ngClient/tmp
+ngClient/out-tsc
+ngClient/bazel-out
+
+# Node
+ngClient/node_modules
+ngClient/npm-debug.log
+ngClient/yarn-error.log
+
+# IDEs and editors
+ngClient/.idea/
+ngClient/.project
+ngClient/.classpath
+ngClient/.c9/
+*.launch
+ngClient/.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+ngClient/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+ngClient/.history/*
+
+# Miscellaneous
+ngClient/.angular/cache
+.sass-cache/
+ngClient/connect.lock
+ngClient/coverage
+ngClient/libpeerconnection.log
+ngClient/testem.log
+ngClient/typings
+
+# System files
+ngClient/.DS_Store
+ngClient/Thumbs.db
