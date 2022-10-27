@@ -8,7 +8,7 @@ The web application offers a variety of services :<br>
 
 This project was divided into 3 parts :
 - *Chatbot* : made using **Python**, **PyTorch**, **NLTK**, **Flask**
-- *Backend* : made using **Springboot**, **Hibernate**, **Lombok**, **ModelMapper**, **Swagger**, **MySQL**
+- *Backend* : made using *Java*, **Springboot**, **Hibernate**, **Lombok**, **ModelMapper**, **Swagger**, **MySQL**
 - *Frontend* : made using **Angular**, **Typescript**, **JWT Auth0**, **Bootstrap**, **HTML & CSS**
 
 # Contributors
